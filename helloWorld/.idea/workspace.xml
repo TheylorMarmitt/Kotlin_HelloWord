@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e626cc-6067-45cd-88ba-9db22639cb97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReadCSV/src/main/kotlin/ReadCSV/Functions/CancelamentosPorClassificacaoCliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../ReadCSV/src/main/kotlin/ReadCSV/Functions/CancelamentosPorClassificacaoCliente.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReadCSV/src/main/kotlin/ReadCSV/Functions/CancelamentosPorUserResponsavel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../ReadCSV/src/main/kotlin/ReadCSV/Functions/CancelamentosPorUserResponsavel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReadCSV/src/main/kotlin/ReadCSV/Model/CancelamentoUserResponsavel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../ReadCSV/src/main/kotlin/ReadCSV/Model/CancelamentoUserResponsavel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReadCSV/src/main/kotlin/ReadCSV/Functions/MediaTempoVida.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../ReadCSV/src/main/kotlin/ReadCSV/Functions/MediaTempoVida.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

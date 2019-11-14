@@ -7,24 +7,27 @@ fun main(args: Array<String>?) {
     // lendo
     var lista = ler()
 
-    println("-------------   EX - 1   -------------")
     // 1
+    println("-------------   EX - 1   -------------")
     contandoCancelamentos(lista)
 
-    println("-------------   EX - 2   -------------")
     // 2
+    println("-------------   EX - 2   -------------")
     mediaTempoVida(lista)
 
-    println("-------------   EX - 3   -------------")
     // 3
+    println("-------------   EX - 3   -------------")
     contandoCancelamentosMotivo(lista)
 
-    println("-------------   EX - 4   -------------")
     // 4
+    println("-------------   EX - 4   -------------")
     contandoCancelamentosMesAno(lista)
 
-    println("-------------   EX - 5   -------------")
     // 5
+    println("-------------   EX - 5   -------------")
     contandoCancelamentosUserResponsavel(lista)
+
+
+    
 }
 

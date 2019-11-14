@@ -2,6 +2,7 @@ package ReadCSV.Functions
 
 import ReadCSV.Model.Cancelamento
 import java.time.temporal.ChronoUnit
+import kotlin.math.round
 
 fun mediaTempoVida(lista: ArrayList<Cancelamento>){
 
@@ -11,6 +12,6 @@ fun mediaTempoVida(lista: ArrayList<Cancelamento>){
         dias.add(ChronoUnit.DAYS.between(it.data_inicio, it.data_cancelamento))
     }
 
-    println("Média dias: "+ dias.sum().div(dias.size))
+    println("Média dias: "+ "%.2f".format(dias.average()))
 
 }

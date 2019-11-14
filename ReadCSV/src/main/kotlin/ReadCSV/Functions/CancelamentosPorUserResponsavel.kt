@@ -7,8 +7,9 @@ import ReadCSV.Model.CancelamentoUserResponsavel
 fun contandoCancelamentosUserResponsavel(lista: ArrayList<Cancelamento>){
 
     var cancelamentoPorMotivo = ArrayList<CancelamentoUserResponsavel>()
+    val filtrada = lista.distinctBy { it.usuario_responsavel_id }
 
-    lista.forEach {
+    filtrada.forEach {
         val user = it.usuario_responsavel_id
         var count = 0
         lista.forEach{
@@ -19,7 +20,7 @@ fun contandoCancelamentosUserResponsavel(lista: ArrayList<Cancelamento>){
         cancelamentoPorMotivo.add(CancelamentoUserResponsavel(total = count, userResponsavel = user))
     }
 
-    var nova = cancelamentoPorMotivo.distinctBy { it.userResponsavel }.sortedByDescending { it.total }
+    val nova = cancelamentoPorMotivo.sortedByDescending { m -> m.total }
     println("Total - Usuario")
     nova.forEach {
         print(it.total)

@@ -23,7 +23,7 @@ fun contandoCancelamentosMesAno(lista: ArrayList<Cancelamento>){
 
     }
 
-    var nova = cancelamentoMesAno.distinctBy { it.mesAno.format(formatter) }.sortedBy { it.mesAno }
+    val nova = cancelamentoMesAno.distinctBy { it.mesAno.format(formatter) }.sortedBy { it.mesAno }
 
     nova.forEach {
         print(it.total)
