@@ -1,4 +1,7 @@
-package ReadCSV
+package ReadCSV.Functions
+
+import ReadCSV.Model.Cancelamento
+import ReadCSV.Model.CancelamentoMotivo
 
 fun contandoCancelamentosMotivo(lista: ArrayList<Cancelamento>){
 

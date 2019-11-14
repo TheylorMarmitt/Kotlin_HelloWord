@@ -1,4 +1,4 @@
-package ReadCSV
+package ReadCSV.Model
 
 import java.time.LocalDate
 

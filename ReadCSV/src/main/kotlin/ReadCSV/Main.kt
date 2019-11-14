@@ -1,9 +1,9 @@
 
 
-import ReadCSV.contandoCancelamentos
-import ReadCSV.contandoCancelamentosMotivo
-import ReadCSV.ler
-import ReadCSV.mediaTempoVida
+import ReadCSV.Functions.contandoCancelamentos
+import ReadCSV.Functions.contandoCancelamentosMotivo
+import ReadCSV.Functions.ler
+import ReadCSV.Functions.mediaTempoVida
 
 fun main(args: Array<String>?) {
 

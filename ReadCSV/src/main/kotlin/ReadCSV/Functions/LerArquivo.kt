@@ -1,5 +1,6 @@
-package ReadCSV
+package ReadCSV.Functions
 
+import ReadCSV.Model.Cancelamento
 import com.opencsv.CSVReader
 import java.io.BufferedReader
 import java.io.FileReader
@@ -21,15 +22,19 @@ fun ler(): ArrayList<Cancelamento>{
         record = csvReader.readNext()
         while (record != null) {
 
-            lista.add(Cancelamento(cliente_id = record[0].toLong(),
-                usuario_responsavel_id = record[1].toLong(),
-                data_cadastro = LocalDate.parse(record[2], DateTimeFormatter.ISO_DATE) ,
-                classificacao_cliente = record[3],
-                quantidade_usuario_pagante = record[4].toInt(),
-                data_inicio = LocalDate.parse(record[5], DateTimeFormatter.ISO_DATE) ,
-                data_cancelamento = LocalDate.parse(record[6], DateTimeFormatter.ISO_DATE) ,
-                motivo_cancelamento_id = record[7].toInt(),
-                motivo = record[8]))
+            lista.add(
+                Cancelamento(
+                    cliente_id = record[0].toLong(),
+                    usuario_responsavel_id = record[1].toLong(),
+                    data_cadastro = LocalDate.parse(record[2], DateTimeFormatter.ISO_DATE),
+                    classificacao_cliente = record[3],
+                    quantidade_usuario_pagante = record[4].toInt(),
+                    data_inicio = LocalDate.parse(record[5], DateTimeFormatter.ISO_DATE),
+                    data_cancelamento = LocalDate.parse(record[6], DateTimeFormatter.ISO_DATE),
+                    motivo_cancelamento_id = record[7].toInt(),
+                    motivo = record[8]
+                )
+            )
 
             record = csvReader.readNext()
         }

@@ -1,5 +1,6 @@
-package ReadCSV
+package ReadCSV.Functions
 
+import ReadCSV.Model.Cancelamento
 import java.time.temporal.ChronoUnit
 
 fun mediaTempoVida(lista: ArrayList<Cancelamento>){
