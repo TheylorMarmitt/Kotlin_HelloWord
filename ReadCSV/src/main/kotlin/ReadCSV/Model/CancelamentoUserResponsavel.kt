@@ -1,5 +1,5 @@
 package ReadCSV.Model
 
-class CancelamentoUserResponsavel(var total: Int, var userResponsavel: Int) {
+class CancelamentoUserResponsavel(var total: Int, var userResponsavel: Long) {
 
 }

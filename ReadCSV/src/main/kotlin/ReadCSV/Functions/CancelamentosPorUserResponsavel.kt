@@ -6,20 +6,25 @@ import ReadCSV.Model.CancelamentoUserResponsavel
 
 fun contandoCancelamentosUserResponsavel(lista: ArrayList<Cancelamento>){
 
-    var cancelamentoPorUser = ArrayList<CancelamentoUserResponsavel>()
+    var cancelamentoPorMotivo = ArrayList<CancelamentoUserResponsavel>()
 
     lista.forEach {
-        var userResponsavel = it.usuario_responsavel_id
+        val user = it.usuario_responsavel_id
         var count = 0
         lista.forEach{
-
+            if (it.usuario_responsavel_id == user){
+                count += 1
+            }
         }
+        cancelamentoPorMotivo.add(CancelamentoUserResponsavel(total = count, userResponsavel = user))
     }
 
-    var nova = lista.distinctBy { it.usuario_responsavel_id }
-
+    var nova = cancelamentoPorMotivo.distinctBy { it.userResponsavel }.sortedByDescending { it.total }
+    println("Total - Usuario")
     nova.forEach {
-        println(it.usuario_responsavel_id)
+        print(it.total)
+        print(" - ")
+        println(it.userResponsavel)
     }
 
 }
