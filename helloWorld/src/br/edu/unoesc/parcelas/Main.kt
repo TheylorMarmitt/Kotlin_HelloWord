@@ -23,7 +23,11 @@ fun main(){
     listaParcelas(Pagador(qtdDias = intervalo, qtdParcelas = parcelas, valorTotal = valor )).forEach {
         println("----------------------")
         println("Data: " + it.data.format(formatter))
-        println("Valor: " + it.valor)
+        if(parcelas == it.numero){
+            println("Valor: " + (valor - ((it.valor * (parcelas - 1)))))
+        }else{
+            println("Valor: " + it.valor)
+        }
         println("Parcela número: " + it.numero)
     }
 
