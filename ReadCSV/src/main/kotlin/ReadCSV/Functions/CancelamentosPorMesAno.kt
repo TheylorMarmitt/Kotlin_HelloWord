@@ -1,11 +1,11 @@
 package ReadCSV.Functions
 
 import ReadCSV.Model.Cancelamento
-import ReadCSV.Model.CancelamentoCliente
 import ReadCSV.Model.CancelamentoMesAno
+import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-fun contandoCancelamentosMesAno(lista: ArrayList<Cancelamento>){
+fun contandoCancelamentosMesAno(lista: ArrayList<Cancelamento>): List<CancelamentoMesAno>{
 
     var cancelamentoMesAno = ArrayList<CancelamentoMesAno>()
     val formatter = DateTimeFormatter.ofPattern("MM/yyyy")
@@ -20,15 +20,8 @@ fun contandoCancelamentosMesAno(lista: ArrayList<Cancelamento>){
             }
         }
         cancelamentoMesAno.add(CancelamentoMesAno(total = count, mesAno = it.data_cancelamento))
-
     }
 
-    val nova = cancelamentoMesAno.distinctBy { it.mesAno.format(formatter) }.sortedBy { it.mesAno }
-
-    nova.forEach {
-        print(it.total)
-        print(" - ")
-        println(it.mesAno.format(formatter))
-    }
+    return cancelamentoMesAno.distinctBy { it.mesAno.format(formatter) }.sortedBy { it.mesAno }
 
 }

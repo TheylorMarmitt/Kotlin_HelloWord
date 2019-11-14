@@ -3,7 +3,7 @@ package ReadCSV.Functions
 import ReadCSV.Model.Cancelamento
 import ReadCSV.Model.CancelamentoCliente
 
-fun contandoCancelamentos(lista: ArrayList<Cancelamento>){
+fun contandoCancelamentos(lista: ArrayList<Cancelamento>): List<CancelamentoCliente>{
 
     var cancelamentoPorCliente = ArrayList<CancelamentoCliente>()
     val filtrada = lista.distinctBy { it.classificacao_cliente }
@@ -19,12 +19,6 @@ fun contandoCancelamentos(lista: ArrayList<Cancelamento>){
         cancelamentoPorCliente.add(CancelamentoCliente(total = count, classificacao = cla))
     }
 
-    val nova = cancelamentoPorCliente.sortedByDescending { it.total }
-
-    nova.forEach {
-        print(it.total)
-        print(" - ")
-        println(it.classificacao)
-    }
+    return cancelamentoPorCliente.sortedByDescending { it.total }
 
 }
